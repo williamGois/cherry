@@ -38,7 +38,7 @@ export default function UserPage() {
   useEffect( () => {
     async function fetchUsers() {
       try {
-        const response = await fetch('http://localhost:8000/api/v1/users', {
+        const response = await fetch('https://cherry-api-cherry.up.railway.app/api/v1/users', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

@@ -16,7 +16,7 @@ export default function AppView() {
   useEffect( () => {
     async function fetchMeetings() {
       try {
-        const response = await fetch('http://localhost:8000/api/v1/meetings', {
+        const response = await fetch('https://cherry-api-cherry.up.railway.app/api/v1/meetings', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

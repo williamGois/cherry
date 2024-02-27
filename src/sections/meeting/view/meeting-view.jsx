@@ -52,7 +52,7 @@ export default function MeetingPage() {
     
       if(Object.keys(errors).length === 0){
         try {
-          const response = await fetch('http://localhost:8000/api/v1/meetings', {
+          const response = await fetch('https://cherry-api-cherry.up.railway.app/api/v1/meetings', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ export default function MeetingPage() {
   useEffect(() => {
     async function fetchUsers() {
       try {
-        const response = await fetch('http://localhost:8000/api/v1/users');
+        const response = await fetch('https://cherry-api-cherry.up.railway.app/api/v1/users');
         const data = await response.json();
         setUsers(data);
       } catch (error) {
