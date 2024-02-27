@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from 'react-toastify';
 
 import Box from '@mui/material/Box';
@@ -116,7 +117,7 @@ export default function RegisterView() {
       </Stack>
 
       <Stack direction="row" alignItems="center" justifyContent="flex-end" sx={{ my: 3 }}>
-        {errorResister && <Alert severity="error">{errorResister}</Alert>}
+        
         <LoadingButton
           loading={loading}
           fullWidth
@@ -150,7 +151,7 @@ export default function RegisterView() {
           left: { xs: 16, md: 24 },
         }}
       />
-
+{errorResister && <Alert severity="error">{errorResister}</Alert>}
       <Stack alignItems="center" justifyContent="center" sx={{ height: 1 }}>
         <Card
           sx={{
